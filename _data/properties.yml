@@ -1,0 +1,102 @@
+#-------------------------------
+# Properties
+
+
+properties:
+- {
+	property: 'font-family',
+	values: [
+		'serif', 'Helvetica'
+	]
+}
+- {
+	property: 'font-weight',
+	values: [
+		'normal', '700', 'lighter'
+	]
+}
+- {
+	property: 'font-style',
+	values: [
+		'normal', 'italic', 'oblique'
+	]
+}
+- {
+	property: 'font-variant',
+	values: [
+		'normal', 'small-caps'
+	]
+}
+- {
+	property: 'font-size',
+	values: [
+		'12px', '3em', '50%', 'large', '5vw'
+	]
+}
+- {
+	property: 'text-align',
+	values: [
+		'left', 'right', 'center', 'justify'
+	]
+}
+- {
+	property: 'text-decoration',
+	values: [
+		'none', 'underline', 'overline', 'line-through', 'blink'
+	]
+}
+- {
+	property: 'text-indent',
+	values: [
+		'10px', '10%'
+	]
+}
+- {
+	property: 'text-transform',
+	values: [
+		'none', 'capitalize', 'uppercase', 'lowercase'
+	]
+}
+- {
+	property: 'text-shadow',
+	values: [
+		'2px 2px red'
+	]
+}
+- {
+	property: 'direction',
+	values: [
+		'ltr', 'rtl'
+	]
+}
+- {
+	property: 'letter-spacing',
+	values: [
+		'normal', '10px', '-2px'
+	]
+}
+- {
+	property: 'word-spacing',
+	values: [
+		'normal', '10px', '-10px'
+	]
+}
+- {
+	property: 'white-space',
+	values: [
+		'normal', 'pre', 'nowrap', 'pre-wrap', 'pre-line'
+	]
+}
+- {
+	property: 'line-height',
+	values: [
+		'normal', '3', '10px', '50%'
+	]
+}
+- {
+	property: 'vertical-align',
+	values: [
+		'baseline', 'sub', 'super', 'top', 'bottom', 'text-top', 'text-bottom', 'middle', '50%', '10px'
+	]
+}
+

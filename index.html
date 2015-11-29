@@ -1,0 +1,55 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSS Typography</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CSS Typography">
+  
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Title</h1>
+    <p>Description</p>
+  </header>
+
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th class="property">Property</th>
+        <th class="values">Values</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for property in site.data.properties.properties %}
+      <tr>
+        <td class="property">{{property.property}}</td>
+        <td class="values">
+          {% for value in property.values %}
+          <span style="{{property.property}}: {{value}}">{{value}}</span> <span class="value-divider">|</span>
+          {% endfor %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+</div>
+
+
+
+</body>
+</html>
