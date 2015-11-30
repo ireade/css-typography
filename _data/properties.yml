@@ -70,6 +70,12 @@ properties:
 	]
 }
 - {
+	property: 'unicode-bidi',
+	values: [
+		'normal', 'embed', 'bidi-override'
+	]
+}
+- {
 	property: 'letter-spacing',
 	values: [
 		'normal', '10px', '-2px'
@@ -88,9 +94,15 @@ properties:
 	]
 }
 - {
+	property: 'word-wrap',
+	values: [
+		'normal', 'break-word'
+	]
+}
+- {
 	property: 'line-height',
 	values: [
-		'normal', '3', '10px', '50%'
+		'normal', '3', '20px', '300%'
 	]
 }
 - {

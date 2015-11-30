@@ -17,8 +17,7 @@
 <div class="container">
 
   <header>
-    <h1>Title</h1>
-    <p>Description</p>
+    <h1>CSS Typography</h1>
   </header>
 
 
@@ -29,22 +28,59 @@
       <tr>
         <th class="property">Property</th>
         <th class="values">Values</th>
+        <th class="values">Example</th>
       </tr>
     </thead>
 
     <tbody>
       {% for property in site.data.properties.properties %}
+
+
+      <!--  -->
+      {% for value in property.values limit: 1 %}
       <tr>
-        <td class="property">{{property.property}}</td>
-        <td class="values">
-          {% for value in property.values %}
-          <span style="{{property.property}}: {{value}}">{{value}}</span> <span class="value-divider">|</span>
-          {% endfor %}
+        <td class="property" rowspan="{{ property.values | size }}">
+          <code>{{property.property}}</code>
         </td>
+
+        <td class="values" rowspan="1">
+          <code>{{value}}</code>
+        </td>
+        <td class="example">
+          {% if property.contrast_example %}
+          <span>{{property.contrast_example}}</span>
+           {% endif %}
+          <span style="{{property.property}}: {{value}}">The quick brown fox jumped over the lazy dog</span>
+        </td>
+  
       </tr>
+      {% endfor %}
+      {% for value in property.values offset: 1 %}
+      <tr>
+        <td class="values" rowspan="1">
+          <code>{{value}}</code>
+        </td>
+        <td class="example">
+          <span style="{{property.property}}: {{value}}">The quick brown fox jumped over the lazy dog</span>
+        </td>
+        
+      </tr>
+      {% endfor %}
       {% endfor %}
     </tbody>
   </table>
+
+
+  <!-- <tr>
+    <td class="property">{{property.property}}</td>
+    <td class="values">
+      {% for value in property.values %}
+      <span style="{{property.property}}: {{value}}">{{value}}</span> <span class="value-divider">|</span>
+      {% endfor %}
+    </td>
+  </tr> -->
+
+
 
 
 </div>
